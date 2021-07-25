@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <script type='text/javascript' src="js/cliente.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+        <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>telefone</th>
+                    <th>Rua</th>
+                    <th>UF</th>
+                    <th>Número</th>
+                    <th>Cep</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+     </div>
+        <div>
+            <button onclick="vizualizar('cadastro', true)">Novo usuário</button>
+        </div>
+        <div>
+            <a href="index.html"><button type="button">Home</button></a>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input id='nome' placeholder="Nome"
+                required="required" pattern="[a-z\s]+$"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='E-mail' id='email'placeholder="E-mail"  
+                required="required"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='tel' id="telefone" placeholder="Telefone" 
+                required="required" maxlength="15"
+                pattern="[0-9]+$" >
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='rua' id='rua' placeholder="Rua/Avenida"
+                required="required" maxlength="15" pattern="[a-z\s]+$"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='uf' id='uf' placeholder="UF"
+                required="required" maxlength="2" pattern="[a-z\s]+$"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='num' id='numero'placeholder="Número"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='cep' id='cep' placeholder="CEP"
+                required="required" maxlength="8" pattern="[a-z\s]+$"/>
+            </div>
+        </div>
+
+        
+        <div>
+            <button>Salvar</button>
+            <button onclick="vizualizar('lista')" class="cinza" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
