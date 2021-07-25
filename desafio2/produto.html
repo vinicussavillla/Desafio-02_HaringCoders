@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <script type='text/javascript' src="js/produto.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+        <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do produto</th>
+                    <th>Códico do produto</th>
+                    <th>Descrição do produto</th>
+                    <th>Preço</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+     </div>
+        <div>
+            <button onclick="vizualizar('cadastro', true)">Novo produto</button>
+        </div>
+        <div>
+            <a href="index.html"><button type="button">Home</button></a>
+        </div>
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='text' id='nome' placeholder="Nome do produto"
+                required="required" pattern="[a-z\s]+$" maxlength="120"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='text' id='codico'placeholder="Códico do produto"  
+                required="required"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='text' id="descricao" placeholder="Descrição do produto" 
+                required="required" maxlength="120" pattern="[a-z\s]+$"/>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>
+                <input type='rua' id='preco' placeholder="Preço"
+                required="required"  pattern="[0-9]+$"/>
+            </div>
+        </div>
+        <div>
+            <button>Salvar</button>
+            <button onclick="vizualizar('lista')" class="cinza" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
