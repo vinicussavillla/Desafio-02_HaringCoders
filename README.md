@@ -1,5 +1,5 @@
 # Desafio-02_HaringCoders
-# Inventory System: Cláudio Filho 
+# Inventory System: Vincius de Avilla
 
 Este é um projeto que foi desenvolvido durante o programa Hiring Coders da VTEX, onde o desafio era construir um sistema com as seguintes definições:
 
