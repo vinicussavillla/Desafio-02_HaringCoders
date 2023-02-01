@@ -13,7 +13,7 @@ Este é um projeto que foi desenvolvido durante o programa Hiring Coders da VTEX
 
 * Cadastro de dados pessoais do cliente.
 * Cadastro de endereço do cliente.
-* Cadastro de produto (inventári) 
+* Cadastro de produto (inventário) 
 * Editar registros
 * Deletar registros
 * Pesquisar/filtrar
